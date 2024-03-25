@@ -9,13 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView{
+            VStack {
+                Spacer()
+                NavigationLink(destination: NewNoteView(), label: {
+                    Text("Add Task")
+                        .background(.blue)
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .font(.system(size: 30))
+                })
+            }
+            .navigationTitle("Notes")
+            .padding()
         }
-        .padding()
     }
 }
 

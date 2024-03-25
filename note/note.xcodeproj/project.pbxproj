@@ -14,6 +14,8 @@
 		33C3AB162BB1DDD300FFFAF5 /* noteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C3AB152BB1DDD300FFFAF5 /* noteTests.swift */; };
 		33C3AB202BB1DDD300FFFAF5 /* noteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C3AB1F2BB1DDD300FFFAF5 /* noteUITests.swift */; };
 		33C3AB222BB1DDD300FFFAF5 /* noteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C3AB212BB1DDD300FFFAF5 /* noteUITestsLaunchTests.swift */; };
+		33C3AB2F2BB1E04D00FFFAF5 /* NewNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C3AB2E2BB1E04D00FFFAF5 /* NewNoteView.swift */; };
+		33C3AB312BB1E05F00FFFAF5 /* DetailedNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C3AB302BB1E05F00FFFAF5 /* DetailedNoteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		33C3AB1B2BB1DDD300FFFAF5 /* noteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = noteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C3AB1F2BB1DDD300FFFAF5 /* noteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteUITests.swift; sourceTree = "<group>"; };
 		33C3AB212BB1DDD300FFFAF5 /* noteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		33C3AB2E2BB1E04D00FFFAF5 /* NewNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteView.swift; sourceTree = "<group>"; };
+		33C3AB302BB1E05F00FFFAF5 /* DetailedNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedNoteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			children = (
 				33C3AB042BB1DDD100FFFAF5 /* noteApp.swift */,
 				33C3AB062BB1DDD100FFFAF5 /* ContentView.swift */,
+				33C3AB2E2BB1E04D00FFFAF5 /* NewNoteView.swift */,
+				33C3AB302BB1E05F00FFFAF5 /* DetailedNoteView.swift */,
 				33C3AB082BB1DDD300FFFAF5 /* Assets.xcassets */,
 				33C3AB0A2BB1DDD300FFFAF5 /* Preview Content */,
 			);
@@ -258,6 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				33C3AB072BB1DDD100FFFAF5 /* ContentView.swift in Sources */,
+				33C3AB2F2BB1E04D00FFFAF5 /* NewNoteView.swift in Sources */,
+				33C3AB312BB1E05F00FFFAF5 /* DetailedNoteView.swift in Sources */,
 				33C3AB052BB1DDD100FFFAF5 /* noteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

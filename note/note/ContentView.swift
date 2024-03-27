@@ -7,22 +7,28 @@
 
 import SwiftUI
 
+struct Note{
+    var title : String
+    var content : String
+}
 struct ContentView: View {
+    @State private var notes : [Note] = []
+    
     var body: some View {
         NavigationView{
             VStack {
                 Spacer()
-                NavigationLink(destination: NewNoteView(), label: {
+                NavigationLink(destination: NewNoteView(notes: $notes), label: {
                     Text("Add Task")
-                        .background(.blue)
+                        .frame(maxWidth: .infinity, maxHeight: 70, alignment: .center)
                         .foregroundColor(.white)
-                        .frame(maxWidth: .infinity)
                         .font(.system(size: 30))
+                        .background(Color.blue)
                 })
             }
-            .navigationTitle("Notes")
-            .padding()
+            .navigationTitle("Notes")           
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct DetailedNoteView: View {
-//    @Binding var titleNote : String = ""
-//    @Binding var detailNotes : String = ""
+    var notes : Note
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            VStack{
+                Text(notes.content)
+                }
+            }
+        .navigationTitle(notes.title)
+        }
     }
-}
 
 #Preview {
-    DetailedNoteView()
+    DetailedNoteView(notes: Note(title: "", content: ""))
 }

@@ -12,6 +12,7 @@ struct NewNoteView: View {
     @State var content : String = ""
     @State var showToast : Bool = false
     @Binding var notes : [Note]
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationView{
@@ -49,7 +50,7 @@ struct NewNoteView: View {
                 )
             }
         }
-//        .navigationBarBackButtonHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
     
     func createNote(){
@@ -59,7 +60,8 @@ struct NewNoteView: View {
         else{
             showToast = false
             let newNote = Note(title: title, content: content)
-            notes.append(newNote)
+            notes.append(newNote)   
+            presentationMode.wrappedValue.dismiss()
         }
     }
 }

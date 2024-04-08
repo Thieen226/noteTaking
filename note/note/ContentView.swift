@@ -19,8 +19,8 @@ struct ContentView: View {
             VStack {
                 List{
                     ForEach(notes, id: \.self){note in
-                        NavigationLink(destination: DetailedNoteView(), label: {
-                            VStack {
+                        NavigationLink(destination: DetailedNoteView(notes: note), label: {
+                            VStack(alignment: .leading){
                                 Text(note.title)
                                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                                 Text(note.content)
@@ -29,9 +29,8 @@ struct ContentView: View {
                         })
                     }
                 }
-                Spacer()
                 NavigationLink(destination: NewNoteView(notes: $notes), label: {
-                    Text("Add Task")
+                    Text("Add Note")
                         .padding(.top, 30)
                         .frame(maxWidth: .infinity, maxHeight: 70, alignment: .center)
                         .foregroundColor(.white)

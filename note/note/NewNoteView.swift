@@ -11,6 +11,7 @@ struct NewNoteView: View {
     @State var title : String = ""
     @State var content : String = ""
     @State var showToast : Bool = false
+    @State var noteAdded : Bool = false
     @Binding var notes : [Note]
     @Environment(\.presentationMode) var presentationMode
     
@@ -39,7 +40,7 @@ struct NewNoteView: View {
                             createNote()
                         }
                     })
-            
+
             }
             .padding()
             .navigationTitle("Notes")
@@ -50,7 +51,7 @@ struct NewNoteView: View {
                 )
             }
         }
-        .navigationBarBackButtonHidden(true)
+        .navigationBarBackButtonHidden(false)
     }
     
     func createNote(){
@@ -58,6 +59,7 @@ struct NewNoteView: View {
             showToast = true
         }
         else{
+            print("HI")
             showToast = false
             let newNote = Note(title: title, content: content)
             notes.append(newNote)   

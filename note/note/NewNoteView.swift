@@ -18,7 +18,6 @@ struct NewNoteView: View {
     var body: some View {
         NavigationView{
             VStack{
-                Spacer()
                 TextField("Title", text: $title)
                     .padding()
                     .background(Color.gray.opacity(0.1))
@@ -29,6 +28,7 @@ struct NewNoteView: View {
                     .background(Color.gray.opacity(0.1))
                     .cornerRadius(8)
                 
+                
                 NavigationLink(destination: ContentView(), label: {
                     Text("Add Note")
                         .frame(maxWidth: 100, maxHeight: 50)
@@ -37,6 +37,7 @@ struct NewNoteView: View {
                         .cornerRadius(8)
                         .padding()
                         .onTapGesture {
+                            noteAdded = true
                             createNote()
                         }
                     })
@@ -59,8 +60,7 @@ struct NewNoteView: View {
             showToast = true
         }
         else{
-            print("HI")
-            showToast = false
+            showToast = false 
             let newNote = Note(title: title, content: content)
             notes.append(newNote)   
             presentationMode.wrappedValue.dismiss()

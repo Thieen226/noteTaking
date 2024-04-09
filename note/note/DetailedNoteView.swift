@@ -13,15 +13,20 @@ struct DetailedNoteView: View {
         NavigationView{
             VStack{
                 Text(notes.content)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-                    .background(Color.gray.ignoresSafeArea())
                     .multilineTextAlignment(.leading)
+                    .padding(.top)
+                Spacer()
+                    
             }
+            .frame(maxWidth: 360, maxHeight: 650)
+            .background(Color.gray.opacity(0.1))
+            .cornerRadius(8)
+            
             .navigationTitle(notes.title)
         }
     }
 }
 
 #Preview {
-    DetailedNoteView(notes: Note(title: "HI", content: "D"))
+    DetailedNoteView(notes: Note(title: "HI", content: "Dkjdsfklajdlkjalkfadlkfjhlajksdfhljkhaflkjhaldjksfhlkja"))
 }

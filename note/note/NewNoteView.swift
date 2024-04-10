@@ -40,11 +40,12 @@ struct NewNoteView: View {
                             noteAdded = true
                             createNote()
                         }
-                    })
-
+                })
+                
             }
             .padding()
             .navigationTitle("Notes")
+            .navigationBarBackButtonHidden(false)
             .alert(isPresented: $showToast){
                 Alert(
                     title: Text("No note has added"),
@@ -52,7 +53,6 @@ struct NewNoteView: View {
                 )
             }
         }
-        .navigationBarBackButtonHidden(false)
     }
     
     func createNote(){

@@ -16,7 +16,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView{
-            VStack {
+            VStack{
                 List{
                     ForEach(notes, id: \.self){note in
                         NavigationLink(destination: DetailedNoteView(notes: note), label: {

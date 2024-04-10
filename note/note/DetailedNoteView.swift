@@ -14,11 +14,11 @@ struct DetailedNoteView: View {
             VStack{
                 Text(notes.content)
                     .multilineTextAlignment(.leading)
-                    .padding(.top)
                 Spacer()
                     
             }
-            .frame(maxWidth: 360, maxHeight: 650)
+            .padding()
+            .frame(maxWidth: 360, maxHeight: 650, alignment: .leading)
             .background(Color.gray.opacity(0.1))
             .cornerRadius(8)
             
@@ -28,5 +28,5 @@ struct DetailedNoteView: View {
 }
 
 #Preview {
-    DetailedNoteView(notes: Note(title: "HI", content: "Dkjdsfklajdlkjalkfadlkfjhlajksdfhljkhaflkjhaldjksfhlkja"))
+    DetailedNoteView(notes: Note(title: "HI", content: "Dkjds"))
 }

@@ -7,10 +7,13 @@
 
 import SwiftUI
 
+//create variables
+//using Hashable to pass elements in the struct as normal elements
 struct Note: Hashable{
     var title : String
     var content : String
 }
+
 struct ContentView: View {
     @State private var notes : [Note] = []
     
@@ -43,7 +46,6 @@ struct ContentView: View {
            
             .navigationTitle("Notes")
         }
-        .navigationBarBackButtonHidden(true)
     }
 }
 

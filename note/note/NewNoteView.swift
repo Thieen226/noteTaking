@@ -16,35 +16,34 @@ struct NewNoteView: View {
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        NavigationView{
-            VStack{
-                TextField("Title", text: $title)
-                    .padding()
-                    .background(Color.gray.opacity(0.1))
+        VStack{
+            TextField("Title", text: $title)
+                .padding()
+                .background(Color.gray.opacity(0.1))
+                .cornerRadius(8)
+                
+            TextEditor(text: $content)
+                .padding()
+                .background(Color.gray.opacity(0.1))
+                .cornerRadius(8)
+                
+                
+            NavigationLink(destination: ContentView(), label: {
+                Text("Add Note")
+                    .frame(maxWidth: 100, maxHeight: 50)
+                    .background(Color.blue)
+                    .foregroundColor(Color.white)
                     .cornerRadius(8)
-                
-                TextEditor(text: $content)
                     .padding()
-                    .background(Color.gray.opacity(0.1))
-                    .cornerRadius(8)
-                
-                
-                NavigationLink(destination: ContentView(), label: {
-                    Text("Add Note")
-                        .frame(maxWidth: 100, maxHeight: 50)
-                        .background(Color.blue)
-                        .foregroundColor(Color.white)
-                        .cornerRadius(8)
-                        .padding()
-                        .onTapGesture {
-                            noteAdded = true
-                            createNote()
-                        }
-                })
-                
-            }
-            .padding()
+                    .onTapGesture {
+                        noteAdded = true
+                        createNote()
+                    }
+            })
+        }
             .navigationTitle("Notes")
+            .padding()
+            
             .navigationBarBackButtonHidden(false)
             .alert(isPresented: $showToast){
                 Alert(
@@ -52,7 +51,6 @@ struct NewNoteView: View {
                     message: Text("Please enter a title or content")
                 )
             }
-        }
     }
     
     func createNote(){

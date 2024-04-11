@@ -12,9 +12,7 @@ struct DetailedNoteView: View {
     var body: some View {
         VStack{
             Text(notes.content)
-                .multilineTextAlignment(.leading)
-            Spacer()
-                    
+            Spacer()  //let the Text takes all the space vertically
         }
         .navigationTitle(notes.title)
         
@@ -26,5 +24,5 @@ struct DetailedNoteView: View {
 }
 
 #Preview {
-    DetailedNoteView(notes: Note(title: "HI", content: "Dkjds"))
+    DetailedNoteView(notes: Note(title: "", content: ""))
 }
